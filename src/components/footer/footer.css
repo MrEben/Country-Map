@@ -1,0 +1,8 @@
+footer{
+    height: 70vh;
+    background: var(--background);
+}
+footer .footer-container{
+    height: 70%;
+    background: var(--silver);
+}

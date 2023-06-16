@@ -1,0 +1,69 @@
+nav {
+  margin-top: 1rem;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-container .logo {
+  display: flex;
+  align-items: center;
+}
+.nav-container .logo {
+  display: flex;
+}
+.nav-container .logo h2 {
+  font-weight: 700;
+  display: flex;
+}
+.nav-container .logo .danger {
+  color: red;
+}
+.nav-container .app-links {
+  text-transform: capitalize;
+}
+.nav-container .app-links > div {
+  border: 2px solid var(--clr-dark-blue);
+  height: fit-content;
+  padding: 0.27rem;
+  font-weight: 600;
+  border-radius: 5rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.nav-container .app-links div a{
+  color: black;
+}
+.nav-container .app-links div:hover {
+  background: var(--clr-dark-blue);
+  color: var(--clr-white);
+}
+.nav-container .app-links div:hover a{
+  color: var(--clr-white);
+}
+.nav-container .app-links h4 {
+  font-weight: 600;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+/* =====For Small screens====== */
+
+@media screen and (max-width: 600px) {
+  .nav-container {
+    align-items: center;
+  }
+ 
+  .nav-container .app-links {
+    margin-left: 9rem;
+  }
+  .nav-container .app-links > div {
+    padding: 0.6rem;
+    letter-spacing: normal;
+    border-radius: 2rem;
+    font-weight: 400;
+  }
+  .nav-container .app-links h4 > span {
+    display: none;
+  }
+}
