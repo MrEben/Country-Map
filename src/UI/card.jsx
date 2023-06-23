@@ -22,7 +22,7 @@ const CountriesCard = ({ data }) => {
                   <div className="projcard-title">{name.common}</div>
                   {/* <div className="projcard-subtitle">Capital: {capital}</div> */}
                   <div className="projcard-subtitle">
-                      Capital: {capital[0]}
+                      Capital: {capital?capital[0]:''}
                     </div>
                   <div className="projcard-bar"></div>
                   {/* <div className="projcard-description">

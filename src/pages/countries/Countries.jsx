@@ -26,16 +26,15 @@ const Countries = () => {
   const handleClick = (e) => {
     const category = e.currentTarget.dataset.gh;
     setActiveBtn(category);
-
+    const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
     if (category === "all") {
       setData(countries);
     } else {
       const filtered = countries.filter((country) =>
-        country.region.includes(category)
+        country.region.includes(capitalize(category))
       );
       setData(filtered);
     }
-    // console.log(e.currentTarget);
   };
 
   const [data, setData] = useState([]);
@@ -118,7 +117,7 @@ const Countries = () => {
         </div>
       </header>
 
-      <CountriesCard data={data}/>
+      <CountriesCard data={data} />
     </>
   );
 };
