@@ -1,3 +1,90 @@
+.nav-bar {
+  display: flex;
+  background-color: rgb(39, 36, 36);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+}
+.nav-bar a {
+  margin: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.nav-bar :hover {
+  color: rgb(180, 175, 175);
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-bar .logo {
+  display: flex;
+  align-items: center;
+}
+.nav-bar .logo {
+  display: flex;
+}
+.nav-bar .logo h2 {
+  font-weight: 700;
+  display: flex;
+}
+.nav-bar .logo .danger {
+  color: red;
+}
+.nav-bar .app-links {
+  text-transform: capitalize;
+}
+.nav-bar .app-links > div {
+  border: 2px solid var(--clr-dark-blue);
+  height: fit-content;
+  padding: 0.27rem;
+  font-weight: 600;
+  border-radius: 5rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.nav-bar .app-links div a {
+  color: black;
+}
+.nav-bar .app-links div:hover {
+  background: var(--clr-dark-blue);
+  color: var(--clr-white);
+}
+.nav-bar .app-links div:hover a {
+  color: var(--clr-white);
+}
+.nav-bar .app-links h4 {
+  font-weight: 600;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+/* =====For Small screens====== */
+
+@media screen and (max-width: 600px) {
+  .nav-bar {
+    align-items: center;
+  }
+
+  .nav-bar .app-links {
+    margin-left: 9rem;
+  }
+  .nav-bar .app-links > div {
+    padding: 0.6rem;
+    letter-spacing: normal;
+    border-radius: 2rem;
+    font-weight: 400;
+  }
+  .nav-bar .app-links h4 > span {
+    display: none;
+  }
+}
+
 nav {
   margin-top: 1rem;
 }

@@ -66,6 +66,7 @@ const Countries = () => {
 
   return (
     <>
+     
       <header>
         <div className="filter-options">
           <div className="search">
