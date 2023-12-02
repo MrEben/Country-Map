@@ -2,7 +2,6 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line react/prop-types
 const CountriesCard = ({ data }) => {
-
   return (
     <>
       <div className="countries projcard-container cards">

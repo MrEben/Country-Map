@@ -4,16 +4,27 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 // import { countries } from "../../data/datas";
 import "./countries.css";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineLoading } from "react-icons/ai";
 import CountriesCard from "../../UI/card";
+
+const preLoader = () => {
+  return (
+    <>
+      <h3>loading</h3>
+      <AiOutlineLoading />
+    </>
+  );
+};
 
 const Countries = () => {
   const [countries, setCountries] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchCountries = async () => {
       try {
         const response = await axios.get("https://restcountries.com/v3.1/all");
         setCountries(response.data);
+        setLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -37,10 +48,12 @@ const Countries = () => {
     }
   };
 
+  // set countries response to a new variable
   const [data, setData] = useState([]);
   useEffect(() => {
     setData(countries);
   }, [countries]);
+  console.log();
 
   const continents = [
     { name: "World", code: "all" },
@@ -66,7 +79,6 @@ const Countries = () => {
 
   return (
     <>
-     
       <header>
         <div className="filter-options">
           <div className="search">
@@ -117,8 +129,14 @@ const Countries = () => {
           </div>
         </div>
       </header>
-
-      <CountriesCard data={data} />
+      {loading ? (
+        <div style={{ textAlign: "center" }}>
+          <h3>loading data</h3>
+          <AiOutlineLoading className="rotate-icon" />
+        </div>
+      ) : (
+        <CountriesCard data={data} />
+      )}
     </>
   );
 };

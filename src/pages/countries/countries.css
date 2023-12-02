@@ -282,6 +282,9 @@ header .buttons .bn:hover {
   font-weight: 700;
 }
 
+.rotate-icon {
+  animation: rotation infinite 1s linear;
+}
 @media screen and (max-width: 1024px) {
   .projcard-container {
     justify-content: center;
@@ -336,5 +339,14 @@ header .buttons .bn:hover {
   }
   .projcard .projcard-innerbox img {
     display: block;
+  }
+}
+
+@keyframes rotation {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
   }
 }
