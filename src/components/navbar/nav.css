@@ -1,0 +1,58 @@
+.nav-bar {
+  background-color: var(--clr-deep-blue);
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 999;
+  padding: 1rem 4rem;
+  color: var(--clr-white);
+}
+.nav-bar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.nav-bar .logo {
+  color: var(--clr-white);
+}
+.nav-bar .logo h2 {
+  display: flex;
+  font-weight: 700;
+}
+.nav-bar .logo .danger {
+  color: red;
+}
+.nav-bar .app-links > div {
+  text-transform: capitalize;
+  border: 2px solid var(--clr-dark-blue);
+  height: fit-content;
+  padding: 0.27rem;
+  border-radius: 5rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.nav-bar .app-links div:hover {
+  background: var(--clr-dark-blue);
+}
+.nav-bar .app-links h4 {
+  gap: 0.3rem;
+  font-weight: 600;
+  color: var(--clr-white);
+}
+/* =====For Small screens====== */
+
+@media screen and (max-width: 600px) {
+  .nav-bar {
+    padding: 1rem 2rem;
+  }
+  .nav-bar .app-links div {
+    padding: 0.6rem;
+    border-radius: 2rem;
+    font-weight: 400;
+  }
+  .nav-bar .app-links span {
+    display: none;
+  }
+}
