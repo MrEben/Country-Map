@@ -59,23 +59,23 @@ const CountryDetails = () => {
                   <h3>Info</h3>
                   <div className="specs center">
                     <div>
-                      <h3>Official Name</h3>
+                      <h3>Official Name: </h3>
                       <h4>{countryData.name.official}</h4>
                     </div>
                     <div>
-                      <h3>Continent</h3>
+                      <h3>Continent:</h3>
                       <h4>{countryData.region}</h4>
                     </div>
                     <div>
-                      <h3>Capital</h3>
+                      <h3>Capital:</h3>
                       <h4>{countryData.capital}</h4>
                     </div>
                     <div>
-                      <h3>Timezones</h3>
+                      <h3>Timezones:</h3>
                       <h4>{countryData.timezones}</h4>
                     </div>
                     <div>
-                      <h3>Population</h3>
+                      <h3>Population:</h3>
                       <h4>{countryData.population}</h4>
                     </div>
                   </div>
